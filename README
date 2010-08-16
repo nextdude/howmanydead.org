@@ -5,25 +5,40 @@ of the scope of political violence around the globe as it happens in the hope
 of informing policy and public discourse.
 
 How many people have been killed, maimed, orphaned, displaced or otherwise
-grievously hurt by political violence over the past X months in conflict Y in
-region Z? These numbers are difficult to come by. The definition of political
-violence is not widely agreed upon and there are no definitive "official"
-sources of data to estimate its scope. There are many websites that provide
-some estimates and there are many good people working to document the extent
-of political violence. However, this work is contained in a diffuse body of
-web sites and academic articles that do not keep pace with the evolution of
-political conflict across the globe.  HMD's goal is to provide a way to
-organize data from these myriad sources, as well as from social media to try
-to track the scope of casualties from political violence.
+grievously hurt by political violence in a given conflict, over a given time
+period?  
 
-What HMD Is and Is Not
+How many people were killed in the violence following the 2009 Iranian
+elections? How many civilians have been killed in Afghanistan over the past
+three years?  These numbers are difficult to come by. The definition of
+political violence is not widely agreed upon and there are no definitive
+official sources of data to estimate its scope. Governmental organizations are
+not particularly good at tracking conflict data because casualty estimates
+carry political costs that most governments are not willing or capable of
+bearing. There are well known academic research efforts, such as the Uppsala
+Conflict Data Program (UCDP) at Uppsala University in Sweden, and the Center
+for International Development and Conflict Management (CIDCM) at the
+University of Maryland in the United States, that track casualty estimates,
+among other variables, on an annual basis for conflicts that meet their
+definitions of political violence.  The UCDP data is searchable and available
+online. In addition, there are well-known non-academic and non-governmental
+organizations (NGOs), such as Amnesty International, that track conflicts and
+their casualties.  All of this work, however, this work is contained in a
+diffuse body of web sites, agency and academic reports that struggle to keep
+pace with the evolution of political conflict across the globe.  HMD's goal is
+to provide a way to organize data from these myriad sources, as well as from
+social media to track the scope of casualties from political violence in
+real-time.
 
-HMD is not a political blog. HMD does not advocate for any side in a political
-conflict. HMD does not filter content on the site with an editorial eye to
-slant coverage one way or the other. While HMD was created to focus attention
-on highly complex and controversial topics surrounding the casualty estimates
-that comprise the site, it is important for HMD to remain impartial. HMD is an
-information resource sustained by its users to help inform its users.
+What HMD Is Not
+
+HMD is not a political blog. HMD does not advocate for any side in a
+particular political conflict. HMD does not filter content on this site with
+an editorial eye to slant coverage one way or the other. While HMD was created
+to focus attention on highly complex and controversial topics surrounding the
+casualty estimates that comprise the site, it is important for HMD to remain
+impartial. HMD is an information resource sustained by its users to help
+inform its users.
 
 By aggregating publicly available data sources with reports culled through
 social network channels like Twitter and Facebook, HMD tries to provide the
@@ -31,7 +46,13 @@ best casualty estimates in as close to real time as possible so our users can
 inform their personal opinions and public policies on global political
 conflicts.
 
-Why is HMD Useful
+Why HMD Is Useful
+
+Consider the June 2009 Iranian election and the violence that followed. There
+is scant information on casualty numbers, and the estimates that exist are
+divergent. The Iranian government has admitted to 36 deaths. CNN reported
+unofficial estimates of over 150 deaths in the protests on just one day (June
+20th) of the protests. 
 
 Use example of 2008 war in Gaza and Iranian political violence to make the
 point that it's difficult to obtain estimates, but still important to do so.
@@ -53,7 +74,7 @@ casualty report itself. It captures these reports from the following channels:
   api - postings to a restful api
   email - an email to report@hmd.org
   twitter - tweets @hmd.org
-  facebook - postings to hmd page
+  facebook - postings to hmd page and culled from member pages
   user feeds - rss feeds of users
 
 On channels other than the web and api, we use microformats to embed report
@@ -65,7 +86,7 @@ can be filtered. Reports that are initially unauthenticated can later be
 authenticated by a user adding their channel to an authenticated account.
 
 Another kind of transaction we process online is voting for reports. This
-allows users of the site reveal the degree of their interest in particular
+allows users of the site to reveal the degree of their interest in particular
 reports. It allows HMD to rank reports and show trending issues.
 
 Another kind of transaction we process online is commenting on reports.
@@ -111,12 +132,3 @@ dimensions
   time
   location
   
-  
-
-
-
-
-
-
-
-

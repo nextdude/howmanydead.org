@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<config xmlns:zf="http://framework.zend.com/xml/zend-config-xml/1.0/">
+  
+  <production>
+    
+    <phpSettings>
+      <display_startup_errors>false</display_startup_errors>
+      <display_errors>false</display_errors>
+    </phpSettings>
+    
+    <bootstrap>
+      <path><zf:const zf:name="APPLICATION_PATH"/>/Bootstrap.php</path>
+      <class>Bootstrap</class>
+    </bootstrap>
+    
+    <resources>
+      <db>
+        <adapter>pdo_mysql</adapter>
+        <params>
+          <host>localhost</host>
+          <username>root</username>
+          <password></password>
+          <dbname>hmd</dbname>
+          <adapterNamespace>Hmd_Db_Adapter</adapterNamespace>
+          <tableNamespace>Hmd_Db_Model_Table</tableNamespace>
+        </params>
+        <isDefaultTableAdapter>true</isDefaultTableAdapter>
+      </db>
+      
+      <session>
+        <name>HMD_SESSION</name>
+        <save_path><zf:const zf:name="APPLICATION_PATH"/>/../data/session</save_path>
+        <use_only_cookies>true</use_only_cookies>
+        <remember_me_seconds>864000</remember_me_seconds>
+        <saveHandler>
+          <class>Zend_Session_SaveHandler_DbTable</class>
+          <options>
+            <name>session</name>
+            <primary>id</primary>
+            <modifiedColumn>modified</modifiedColumn>
+            <dataColumn>data</dataColumn>
+            <lifetimeColumn>lifetime</lifetimeColumn>
+            <lifetime>864000</lifetime>
+          </options>
+        </saveHandler>
+      </session>      
+      
+      <layout>
+        <layout>layout</layout>
+        <layoutPath><zf:const zf:name="APPLICATION_PATH"/>/layouts/scripts</layoutPath>
+      </layout>
+      
+      <frontController>
+        <controllerDirectory><zf:const zf:name="APPLICATION_PATH"/>/controllers</controllerDirectory>
+        <moduleDirectory><zf:const zf:name="APPLICATION_PATH"/>/modules</moduleDirectory>
+        <moduleControllerDirectoryName>modules</moduleControllerDirectoryName>
+        <defaultModule>www</defaultModule>
+      </frontController>
+      
+    </resources>
+
+  </production>
+
+  <development zf:extends="production">
+    
+    <php-settings>
+      <display_startup_errors>true</display_startup_errors>
+      <display_errors>true</display_errors>
+    </php-settings>
+
+    <resources>
+      <db>
+        <params>
+          <host>localhost</host>
+        </params>
+      </db>
+    </resources>
+
+  </development>
+
+</config>

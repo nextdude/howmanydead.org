@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header adminlang="en_US" segtype="sentence" srclang="en_US" creationtool="manual" o-tmf="none"
+    datatype="plaintext" creationtoolversion="0.0"/>
+  <body>
+    <tu tuid="en_US">
+      <tuv xml:lang="en_US"><seg>English</seg></tuv>
+      <tuv xml:lang="es"><seg>Inglés</seg></tuv>
+      <tuv xml:lang="ru"><seg>Английский</seg></tuv>
+    </tu>
+    <tu tuid="es">
+      <tuv xml:lang="es"><seg>Español</seg></tuv>
+      <tuv xml:lang="en_US"><seg>Spanish</seg></tuv>
+      <tuv xml:lang="ru"><seg>Испанский</seg></tuv>
+    </tu>
+    <tu tuid="ru">
+      <tuv xml:lang="ru"><seg>Русский</seg></tuv>
+      <tuv xml:lang="en_US"><seg>Russian</seg></tuv>
+      <tuv xml:lang="es"><seg>Ruso</seg></tuv>
+    </tu>
+    <tu tuid="app-title">
+      <tuv xml:lang="en_US">
+        <seg>HowManyDead.org</seg>
+      </tuv>
+    </tu>
+    <tu tuid="title-sep">
+      <tuv xml:lang="en_US">
+        <seg> :: </seg>
+      </tuv>
+    </tu>
+    <tu tuid="language-index-title">
+      <tuv xml:lang="en_US"><seg>Available Languages</seg></tuv>
+      <tuv xml:lang="es"><seg>Idiomas Disponibles</seg></tuv>
+      <tuv xml:lang="ru"><seg>Время Языки</seg></tuv>
+    </tu>
+    <tu tuid="currently-selected-language">
+      <tuv xml:lang="en_US"><seg>English is the currently selected language.</seg></tuv>
+      <tuv xml:lang="es"><seg>El español es el idioma seleccionado actualmente.</seg></tuv>
+      <tuv xml:lang="ru"><seg>Русский является выбранный язык.</seg></tuv>
+    </tu>
+  </body>
+</tmx>
