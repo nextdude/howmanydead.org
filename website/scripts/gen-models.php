@@ -7,11 +7,11 @@ $config = Zend_Registry::get('config');
 $dbParams = $config->resources->db->params;
 
 $options = array();
-$options['infoSchema']       = Zend_Db::factory('Pdo_Mysql', array(
-    'host'     => $dbParams->host,
-    'username' => $dbParams->username,
-    'password' => $dbParams->password,
-    'dbname'   => 'information_schema'
+$options['infoSchema'] = Zend_Db::factory('Pdo_Mysql', array(
+  'host'     => $dbParams->host,
+  'username' => $dbParams->username,
+  'password' => $dbParams->password,
+  'dbname'   => 'information_schema'
 ));
 $options['schema']           = $dbParams->dbname;
 $options['nameFilter']       = new Zend_Filter_Word_UnderscoreToCamelCase();
@@ -72,18 +72,17 @@ function getForeignKeys($table,$options) {
   $foreignKeys = array();
   foreach ($rows as $row) {
     $refTable = $row['referenced_table_name'];
-    $refTableKey = ucfirst($nameFilter->filter($refTable));
+    $refTableClass = $tableClassPrefix . ucfirst($nameFilter->filter($refTable));
     $pos = $row['ordinal_position'] - 1;
     if (!isset($foreignKeys[$refTable])) {
-      $refTableClass = $tableClassPrefix . $refTableKey;
-      $foreignKeys[$refTableKey] = array(
+      $foreignKeys[$refTable] = array(
         'columns'       => array(),
         'refTableClass' => $refTableClass,
         'refColumns'    => array()
       );
     }
-    $foreignKeys[$refTableKey]['columns'][$pos] = $row['column_name'];
-    $foreignKeys[$refTableKey]['refColumns'][$pos] = $row['referenced_column_name'];
+    $foreignKeys[$refTable]['columns'][$pos] = $row['column_name'];
+    $foreignKeys[$refTable]['refColumns'][$pos] = $row['referenced_column_name'];
   }
   return $foreignKeys;
 }

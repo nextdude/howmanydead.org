@@ -1,5 +1,5 @@
 <?php
-//---[ THIS FILE WAS AUTO-GENERATED AT 2010-08-16T16:25:40Z ]
+//---[ THIS FILE WAS AUTO-GENERATED AT 2010-08-18T13:40:10Z ]
 /**
  * HowManyDead.org
  *
@@ -39,12 +39,12 @@ class Hmd_Db_Model_Table_UserService extends Hmd_Db_Model_Table_Abstract {
   protected $_sequence     = false;
   protected $_primary      = array('user_id','service_id');
   protected $_referenceMap = array(
-    'Service' => array(
+    'service' => array(
       'columns'        => array('service_id'),
       'refTableClass'  => 'Hmd_Db_Model_Table_Service',
       'refColumns'     => array('id')
     ),
-    'User' => array(
+    'user' => array(
       'columns'        => array('user_id'),
       'refTableClass'  => 'Hmd_Db_Model_Table_User',
       'refColumns'     => array('id')

@@ -34,7 +34,10 @@ require_once 'Zend/Db/Table/Abstract.php';
  */
 class Hmd_Db_Model_Table_Abstract extends Zend_Db_Table_Abstract {
 
-  const DEFAULT_ORDER = "defaultOrder";
+  const DEFAULT_ORDER  = "defaultOrder";
+  const MTIME_COLUMN   = "mtime";
+  const CTIME_COLUMN   = "ctime";
+  const DELETED_COLUMN = "is_deleted";
 
   protected $_rowClass     = 'Hmd_Db_Model_Table_Row_Abstract';
   
@@ -93,5 +96,28 @@ class Hmd_Db_Model_Table_Abstract extends Zend_Db_Table_Abstract {
     else {
       return (array) $this->_defaultOrder;
     }
+  }
+
+  /**
+   * Overrides the table insert statement to set the create and modified time columns automatically.
+   * @param array $data Data to insert.
+   * @return mixed Generated primary key.
+   */
+  public function insert(array $data) {
+    $data[self::CTIME_COLUMN] = time();
+    $data[self::MTIME_COLUMN] = time();
+    return parent::insert($data);
+  }
+
+
+  /**
+   * Overrides the table update statement to set the modified time column automatically.
+   * @param array $data Data to update.
+   * @param string $where WHERE clause to limit the update.
+   * @return int Number of rows updated.
+   */
+  public function update(array $data, $where) {
+    $data[self::MTIME_COLUMN] = time();
+    return parent::update($data, $where);
   }
 }
