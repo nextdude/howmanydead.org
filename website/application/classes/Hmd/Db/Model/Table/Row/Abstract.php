@@ -74,7 +74,7 @@ class Hmd_Db_Model_Table_Row_Abstract extends Zend_Db_Table_Row_Abstract {
   public function getForeignKeyFor($name) {
     $map = $this->getReferenceMap();
     foreach ($map as $foreignKey => $spec) {
-      if (in_array($name, $map[Zend_Db_Table_Abstract::COLUMNS])) {
+      if (in_array($name, (array)$map[Zend_Db_Table_Abstract::COLUMNS])) {
         return $foreignKey;
       }
     }
@@ -123,8 +123,8 @@ class Hmd_Db_Model_Table_Row_Abstract extends Zend_Db_Table_Row_Abstract {
   protected function _setForeignObject($name, $object) {
     $this->_foreignObjects[$name] = $object;
     $map = $this->getReferenceMap($name);
-    $cols = $map[Zend_Db_Table_Abstract::COLUMNS];
-    $refCols = $map[Zend_Db_Table_Abstract::REF_COLUMNS];
+    $cols = (array) $map[Zend_Db_Table_Abstract::COLUMNS];
+    $refCols = (array) $map[Zend_Db_Table_Abstract::REF_COLUMNS];
     for ($i = 0; $i < count($cols); $i++) {
       $col = $cols[$i];
       $refCol = $refCols[$i];
