@@ -39,7 +39,7 @@ is to provide a way to organize data from these myriad sources, as
 well as from social media, to track the scope of casualties from
 political violence in as close to real-time as possible.
 
-What HMD Is Not
+## What HMD Is Not
 
 HMD is not a political blog. HMD does not advocate for any side in
 a particular political conflict. HMD does not filter content on
@@ -56,7 +56,7 @@ to provide the best casualty estimates in as close to real time as
 possible so our users can inform their personal opinions and public
 policies on global political conflicts.
 
-Why HMD Is Useful
+## Why HMD Is Useful
 
 Consider the June 2009 Iranian election and the violence that
 followed. There is scant information on casualty numbers, and the
