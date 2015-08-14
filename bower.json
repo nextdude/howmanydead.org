@@ -5,7 +5,7 @@
   "authors": [
     "Robert Lyons <nextdude@gmail.com>"
   ],
-  "description": "How Many Dead website",
+  "description": "A social web service for tracking estimates of the scope of political violence around the globe as it happens.",
   "main": "server.js",
   "license": "CC-BY-NC-ND-4.0",
   "ignore": [

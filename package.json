@@ -1,7 +1,7 @@
 {
   "name": "howmanydead.org",
   "version": "0.1.0",
-  "description": "Web server for how many dead website.",
+  "description": "A social web service for tracking estimates of the scope of political violence around the globe as it happens.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
